@@ -1,0 +1,16 @@
+import socket
+import caesar
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+PORT = 10082
+sock.bind(('', PORT))
+sock.listen(100)
+print("Start" + str(PORT))
+conn, addr = sock.accept()
+print("Pidyednano:", addr)
+
+data = conn.recv(1024)
+print(data.decode())
+if input("Would you like to decode? Please write in yes or no") == "yes":
+    print(caesar.decode(data.decode()))
+else:
+    pass
