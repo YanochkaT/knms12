@@ -1,0 +1,20 @@
+while True:
+  c=input("Choose +, -, /, * or 0(exit): ")
+  if(c=="0"):
+    print("Exiting..")
+    break
+  a=int(input("Please write in your first number: "))
+  b=int(input("Please write in your second number: "))
+  if(c=="+"):
+    print(a+b)
+  elif(c=="-"):
+    print(a-b)
+  elif(c=="/"):
+    if(b==0):
+      print("You can't divide to 0.")
+    else:
+      print(a/b)
+  elif(c=="*"):
+    print(a*b)
+  else:
+    print("Wrong!")
